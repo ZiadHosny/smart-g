@@ -7,7 +7,7 @@ type StatusProgress = {
 export type Task = {
     id: string,
     name: string,
-    status: string,
+    status: 'Running' | 'Finished' | 'Queued' | 'New',
     creationDate: string,
     selectionCriteria: string[],
     Operations: string[],

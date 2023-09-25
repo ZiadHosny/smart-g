@@ -11,5 +11,9 @@ a {
 .flex-center {
     display: flex;
     align-items: center;
+}
+
+.flex-sb-center {
+    @extend .flex-center;
     justify-content: space-between;
 }

@@ -1,0 +1,30 @@
+<div class="container-app">
+    <div class="flex-sb-center tabs-container">
+        <div class="d-flex" style="flex-wrap: wrap;">
+            <div class="tab active">
+                <a href="">Tasks</a>
+            </div>
+            <div class="tab">
+                <a href="">Schedules</a>
+            </div>
+
+            <div class="tab">
+                <a href="">Failed SubTasks</a>
+            </div>
+            <div class="separator">
+            </div>
+        </div>
+        <div class="flex-center">
+            <a href="" class="add-btn">
+            </a>
+            <a href="" class="filter">
+                <img src="../../assets/images/Filter Logo.png" alt="" srcset="">
+            </a>
+        </div>
+    </div>
+    <div class="tasks">
+        <div *ngFor="let task of tasks">
+            <app-task [task]="task"></app-task>
+        </div>
+    </div>
+</div>

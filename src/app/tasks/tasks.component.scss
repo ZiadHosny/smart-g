@@ -1,0 +1,78 @@
+@import '../../assets/styles/colors.scss';
+
+.container-app {
+    width: 100%;
+    padding: 0 23px;
+}
+
+.tabs-container {
+
+    .tab {
+        background-color: $pinkish-grey;
+        width: 220px;
+        height: 36px;
+        padding: 7px 0 9px 15px;
+
+        a {
+            color: #fff;
+            font-size: 18px;
+        }
+    }
+
+    .active {
+        background-color: $light-blue;
+    }
+
+
+    .separator {
+        width: 0;
+        height: 0;
+        border-right: 100px solid transparent;
+        border-bottom: 36px solid $pinkish-grey;
+    }
+
+    .add-btn {
+        width: 33px;
+        height: 33px;
+        padding: 8px 7px;
+        background-color: $light-blue;
+        border: solid 1px $warm-grey;
+        position: relative;
+        margin-right: 6px;
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            display: block;
+            background-color: #fff;
+            width: 18px;
+            height: 2px;
+            margin-left: -9px;
+            margin-bottom: 1px;
+            z-index: 9;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0%;
+            display: block;
+            background-color: #fff;
+            width: 2px;
+            height: 18px;
+            margin-top: 8px;
+            z-index: 9;
+        }
+    }
+}
+
+.tasks {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px #858585;
+    width: 100%;
+    padding: 21px 18px 24px 19px;
+    background-color: #fbfbfb;
+}
