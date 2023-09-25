@@ -1,4 +1,4 @@
-@import '../../assets/colors.scss';
+@import '../../assets/styles/colors.scss';
 
 .line {
     background-color: $red;
@@ -9,7 +9,4 @@
 
 nav {
     margin: 0px 27px 24px 27px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }

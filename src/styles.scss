@@ -4,6 +4,12 @@ a {
 }
 
 * {
+    font-weight: bold;
     font-family: Arial;
 }
 
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
