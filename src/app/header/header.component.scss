@@ -1,0 +1,15 @@
+@import '../../assets/colors.scss';
+
+.line {
+    background-color: $red;
+    height: 6px;
+    width: 100%;
+    margin: 0 0 13.7px;
+}
+
+nav {
+    margin: 0px 27px 24px 27px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
