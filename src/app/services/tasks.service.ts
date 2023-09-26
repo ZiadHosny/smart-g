@@ -116,7 +116,7 @@ const tasks: Task[] = [
         statusProgress: {
             running: 0,
             finished: 0,
-            new: 0
+            new: 210
         }
     }
 ]
@@ -127,7 +127,12 @@ export class TasksService {
 
 
     getTasks(): Task[] {
-        return tasks;
+        return [
+            ...tasks,
+            ...tasks.map((e) => ({ ...e, name: `${e.name} 2` })),
+            ...tasks.map((e) => ({ ...e, name: `${e.name} 3` })),
+            ...tasks.map((e) => ({ ...e, name: `${e.name} 4` }))
+        ];
     }
 
 }
