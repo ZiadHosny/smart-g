@@ -1,4 +1,4 @@
-@import '../../assets/styles/colors.scss';
+@import '../../../assets/styles/colors.scss';
 
 .container-app {
     width: 100%;
@@ -74,7 +74,7 @@
     }
 }
 
-.tasks {
+.task-list {
     width: 100%;
     border: solid 1px #858585;
     padding: 21px 18px 24px 19px;

@@ -122,9 +122,8 @@ const tasks: Task[] = [
 ]
 
 @Injectable()
-export class TasksService {
+export class taskListService {
     constructor() { }
-
 
     getTasks(): Task[] {
         return [

@@ -3,17 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { TasksComponent } from './tasks/tasks.component';
-import { FooterComponent } from './footer/footer.component';
-import { TasksService } from './services/tasks.service';
-import { TaskComponent } from './tasks/task/task.component';
+import { HeaderComponent } from './components/header/header.component';
+import { TaskListComponent } from './components/taskList/taskList.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { taskListService } from './services/taskList.service';
+import { TaskComponent } from './components/task/task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    TasksComponent,
+    TaskListComponent,
     TaskComponent,
     FooterComponent,
   ],
@@ -21,7 +21,7 @@ import { TaskComponent } from './tasks/task/task.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [TasksService],
+  providers: [taskListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
