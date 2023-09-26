@@ -1,0 +1,113 @@
+<div class="task" [ngStyle]="{'background-color': task.status == 'Finished' ?
+'#f6fff6' : task.status == 'Running' ? '#e5f4ff': '#fff'}">
+    <div class="before" [ngStyle]="{'background-color': task.status == 'Finished' ?
+         '#12bb12' : task.status == 'Running' ? '#0090ff': '#00afd8'}">
+    </div>
+    <div class="col task-name">
+        <div class="title">Name</div>
+        <div class="task-title">{{task.name}}</div>
+        <div class="task-id">{{task.id}}</div>
+    </div>
+    <div class="line-separator"></div>
+    <div class="col task-status">
+        <div class="flex-center">
+            <div style="margin-right: 8px;">
+                <img [src]="task.status == 'Finished' ?
+                 '../../../assets/images/refresh icon_2.png' : task.status == 'Running'? '../../../assets/images/refresh icon.png' :
+                 task.status == 'Queued'? '../../../assets/images/refresh icon_3.png' :
+                  '../../../assets/images/New task icon.png'" src="../../../assets/images/refresh icon_2.png" alt="">
+            </div>
+            <div>
+                <div class="title">Status</div>
+                <div class="status" [ngStyle]="{'color': task.status == 'Finished' ?
+                '#12bb12' : task.status == 'Running' ? '#0090ff': task.status == 'Queued' ? '#808080': '#000'}">
+                    {{task.status}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="line-separator"></div>
+    <div class="col task-date">
+        <div class="flex-center">
+            <div style="margin-right: 8px;">
+                <img src="../.././../assets/images/date icon.png" alt="">
+            </div>
+            <div>
+                <div class="title">Creation Date</div>
+                <div class="flex-center">
+                    <div class="date" style="margin-right: 5px;">{{date}}</div>
+                    <div class="date">{{hours}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="line-separator"></div>
+    <div class="col task-operations">
+        <div class="title">Selection Criteria</div>
+        <div class="d-flex">
+            <div class="rect"></div>
+            <div class="task-operation">Load Meter Profile</div>
+        </div>
+        <div class="d-flex">
+            <div class="rect"></div>
+            <div class="task-operation">Load Meter Profile</div>
+        </div>
+        <div class="d-flex">
+            <div class="rect"></div>
+            <div class="task-operation">Load Meter Profile</div>
+        </div>
+    </div>
+    <div class="line-separator"></div>
+    <div class="col task-operations">
+        <div class="title">Operations</div>
+        <div class="d-flex">
+            <div class="rect"></div>
+            <div class="task-operation">Load Meter Profile</div>
+        </div>
+        <div class="d-flex">
+            <div class="rect"></div>
+            <div class="task-operation">Load Meter Profile</div>
+        </div>
+        <div class="d-flex">
+            <div class="rect"></div>
+            <div class="task-operation">Load Meter Profile</div>
+        </div>
+    </div>
+    <div class="line-separator"></div>
+    <div class="col task-progress">
+        <div class="flex-sb-center" style="width: 100%;">
+            <div>
+                <div class="title">Tsk (210)</div>
+                <div class="progress progress-bar-app border-green">
+                    <div class="progress-bar progress-green" role="progressbar" aria-valuemin="0" aria-valuemax="210"
+                        [style.width.%]="task.statusProgress.running * 100 / 210">
+                        <span class="progress-text">{{task.statusProgress.running}}</span>
+                    </div>
+                </div>
+                <div class="progress progress-bar-app border-blue">
+                    <div class="progress-bar progress-blue" role="progressbar" aria-valuemin="0" aria-valuemax="210"
+                        [style.width.%]="task.statusProgress.finished * 100 / 210">
+                        <span class="progress-text">{{task.statusProgress.finished}}</span>
+                    </div>
+                </div>
+                <div class="progress progress-bar-app border-red">
+                    <div class="progress-bar progress-red" role="progressbar" aria-valuemin="0" aria-valuemax="210"
+                        [style.width.%]="task.statusProgress.new * 100 / 210">
+                        <span class="progress-text">{{task.statusProgress.new}}</span>
+                    </div>
+                </div>
+            </div>
+            <a href="" class="scheduled-btn">Scheduled</a>
+            <a href="">
+                <img src="../../../assets/images/Arrow.png" alt="" srcset="" />
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- <ul class="pagination">
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+</ul> -->

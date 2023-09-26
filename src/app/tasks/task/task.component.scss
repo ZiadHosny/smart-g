@@ -1,0 +1,148 @@
+@import '../../../assets/styles/colors.scss';
+
+$grey-color : #cbcbcb;
+$warm-grey: #707070;
+
+
+.flex-center-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.task {
+    height: 75px;
+    padding: 0.2px 16.7px 0.2px 0.5px;
+    margin-bottom: 10px;
+    border: solid 1px #ccc;
+    display: flex;
+
+    .before {
+        width: 19px;
+        height: 100%;
+        background-color: $light-blue;
+    }
+
+    .line-separator {
+        width: 1px;
+        height: 44px;
+        background-color: $warm-grey;
+        margin: 15px 6px;
+    }
+
+    .title {
+        font-size: 12px;
+        color: $text-grey;
+    }
+
+    .task-name {
+        @extend .flex-center-vertical;
+        margin: 0 7px;
+
+        .task-title {
+            color: #070707;
+            font-size: 16px;
+        }
+
+        .task-id {
+            color: #a2a2a2;
+            font-size: 10px;
+        }
+    }
+
+    .task-status {
+        @extend .flex-center-vertical;
+        margin: 0 7px;
+
+        .status {
+            font-size: 18px;
+        }
+    }
+
+    .task-date {
+        @extend .flex-center-vertical;
+        margin: 0 7px;
+
+        .date {
+            font-size: 14px;
+        }
+    }
+    
+    .task-operations {
+        @extend .flex-center-vertical;
+        margin: 0 7px;
+
+        .rect {
+            width: 12px;
+            height: 12px;
+            margin: 4px 5px 2px 0;
+            background-color: #c5c5c5;
+        }
+
+        .task-operation {
+            height: 12px;
+            margin: 3px 0 3px;
+            font-size: 11px;
+        }
+    }
+
+    .task-progress {
+        @extend .flex-center-vertical;
+        margin: 0 7px;
+
+        .progress-bar-app {
+            position: relative;
+            width: 50px;
+            border-radius: 0px;
+            height: 12px;
+            margin-bottom: 3px;
+            background-color: transparent;
+            border: solid 1px $green;
+        }
+
+        .progress-text {
+            display: block;
+            position: absolute;
+            text-align: center;
+            color: #000;
+            font-size: 10px;
+            width: 100%;
+        }
+
+        .progress-green {
+            background-color: $green;
+        }
+
+        .progress-blue {
+            background-color: $blue;
+        }
+
+        .progress-red {
+            background-color: $light-red;
+        }
+
+        .border-green {
+            border: solid 1px $green;
+        }
+
+        .border-blue {
+            border: solid 1px $blue;
+        }
+
+        .border-red {
+            border: solid 1px $light-red;
+        }
+
+        .scheduled-btn {
+            background-color: #b4b4b4;
+            height: 21px;
+            width: 75px;
+            padding: 4.5px 12px 5px 10px;
+            border-radius: 10.5px;
+            color: #fff;
+            text-align: center;
+            font-size: 10px;
+        }
+    }
+}

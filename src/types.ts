@@ -11,5 +11,5 @@ export type Task = {
     creationDate: string,
     selectionCriteria: string[],
     Operations: string[],
-    statusProgress: StatusProgress[]
+    statusProgress: StatusProgress
 }

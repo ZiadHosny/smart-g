@@ -18,11 +18,11 @@ const tasks: Task[] = [
             "Commission with tariff",
             "Commission with tariff",
         ],
-        statusProgress: [{
+        statusProgress: {
             running: 120,
             finished: 70,
             new: 20
-        }]
+        }
     }, {
         id: "#TSK_216894891",
         name: "Read Main Data",
@@ -37,11 +37,11 @@ const tasks: Task[] = [
             "Commission with tariff",
             "Commission with tariff",
         ],
-        statusProgress: [{
+        statusProgress: {
             running: 210,
             finished: 120,
             new: 0
-        }]
+        }
     },
     {
         id: "#TSK_216894891",
@@ -56,11 +56,11 @@ const tasks: Task[] = [
             "Load Meter Profile",
             "Commission with tariff",
         ],
-        statusProgress: [{
+        statusProgress: {
             running: 0,
             finished: 0,
             new: 0
-        }]
+        }
     },
     {
         id: "#TSK_216894891",
@@ -75,11 +75,11 @@ const tasks: Task[] = [
             "Load Meter Profile",
             "Commission with tariff",
         ],
-        statusProgress: [{
+        statusProgress: {
             running: 0,
             finished: 0,
             new: 0
-        }]
+        }
     },
     {
         id: "#TSK_216894891",
@@ -94,11 +94,11 @@ const tasks: Task[] = [
             "Load Meter Profile",
             "Commission with tariff",
         ],
-        statusProgress: [{
+        statusProgress: {
             running: 0,
             finished: 0,
             new: 0
-        }]
+        }
     },
     {
         id: "#TSK_216894891",
@@ -113,11 +113,11 @@ const tasks: Task[] = [
             "Load Meter Profile",
             "Commission with tariff",
         ],
-        statusProgress: [{
+        statusProgress: {
             running: 0,
             finished: 0,
             new: 0
-        }]
+        }
     }
 ]
 
