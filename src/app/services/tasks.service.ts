@@ -13,7 +13,7 @@ const tasks: Task[] = [
             "Demo Region 1",
             'Demo Region 1'
         ],
-        Operations: [
+        operations: [
             "Load Meter Profile",
             "Commission with tariff",
             "Commission with tariff",
@@ -32,7 +32,7 @@ const tasks: Task[] = [
             "Electricity Company of Ghana",
             "Demo Region 1",
         ],
-        Operations: [
+        operations: [
             "Load Meter Profile",
             "Commission with tariff",
             "Commission with tariff",
@@ -52,7 +52,7 @@ const tasks: Task[] = [
             "Electricity Company of Ghana",
             "Demo Region 1",
         ],
-        Operations: [
+        operations: [
             "Load Meter Profile",
             "Commission with tariff",
         ],
@@ -71,7 +71,7 @@ const tasks: Task[] = [
             "Electricity Company of Ghana",
             "Demo Region 1",
         ],
-        Operations: [
+        operations: [
             "Load Meter Profile",
             "Commission with tariff",
         ],
@@ -90,7 +90,7 @@ const tasks: Task[] = [
             "Electricity Company of Ghana",
             "Demo Region 1",
         ],
-        Operations: [
+        operations: [
             "Load Meter Profile",
             "Commission with tariff",
         ],
@@ -109,7 +109,7 @@ const tasks: Task[] = [
             "Electricity Company of Ghana",
             "Demo Region 1",
         ],
-        Operations: [
+        operations: [
             "Load Meter Profile",
             "Commission with tariff",
         ],

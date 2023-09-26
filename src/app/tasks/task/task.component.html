@@ -43,33 +43,24 @@
     <div class="line-separator"></div>
     <div class="col task-operations">
         <div class="title">Selection Criteria</div>
-        <div class="d-flex">
-            <div class="rect"></div>
-            <div class="task-operation">Load Meter Profile</div>
-        </div>
-        <div class="d-flex">
-            <div class="rect"></div>
-            <div class="task-operation">Load Meter Profile</div>
-        </div>
-        <div class="d-flex">
-            <div class="rect"></div>
-            <div class="task-operation">Load Meter Profile</div>
+        <div *ngFor="let selectionCriteria of task.selectionCriteria">
+            <div class="d-flex">
+                <div class="rect"></div>
+                <div class="task-operation">{{selectionCriteria}}</div>
+            </div>
         </div>
     </div>
     <div class="line-separator"></div>
     <div class="col task-operations">
         <div class="title">Operations</div>
-        <div class="d-flex">
-            <div class="rect"></div>
-            <div class="task-operation">Load Meter Profile</div>
+        <div *ngFor="let operation of operations">
+            <div class="d-flex">
+                <div class="rect"></div>
+                <div class="task-operation">{{operation}}</div>
+            </div>
         </div>
-        <div class="d-flex">
-            <div class="rect"></div>
-            <div class="task-operation">Load Meter Profile</div>
-        </div>
-        <div class="d-flex">
-            <div class="rect"></div>
-            <div class="task-operation">Load Meter Profile</div>
+        <div class="view-more" *ngIf="task.operations.length > 2">
+            ... view-more
         </div>
     </div>
     <div class="line-separator"></div>
@@ -103,4 +94,3 @@
         </div>
     </div>
 </div>
-

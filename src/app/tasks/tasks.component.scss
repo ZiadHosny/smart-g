@@ -6,6 +6,9 @@
 }
 
 .tabs-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 
     .tab {
         background-color: $pinkish-grey;

@@ -11,10 +11,12 @@ export class TaskComponent implements OnInit {
     @Input() task: Task = {} as Task;
     date: string = ''
     hours: string = ''
+    operations: string[] = []
 
     ngOnInit(): void {
         this.date = this.task.creationDate.split('T')[0]
         this.hours = this.task.creationDate.split('T')[1].split('.')[0]
+        this.operations = this.task.operations.slice(0, 2)
     }
 
 }

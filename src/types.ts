@@ -10,6 +10,6 @@ export type Task = {
     status: 'Running' | 'Finished' | 'Queued' | 'New',
     creationDate: string,
     selectionCriteria: string[],
-    Operations: string[],
+    operations: string[],
     statusProgress: StatusProgress
 }
