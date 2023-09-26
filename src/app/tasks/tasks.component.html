@@ -29,14 +29,14 @@
         <nav *ngIf="tasks.length > 6">
             <ul class="pagination">
                 <li class="page-item" [ngClass]="{'disabled': disablePrev === true}">
-                    <a class="page-link" (click)="onClickPrev()">Previous</a>
+                    <a class="page-link" style="width: 52px;" (click)="onClickPrev()">Previous</a>
                 </li>
                 <div *ngFor="let page of pages">
                     <li class="page-item "><a class="page-link" (click)="onClick(page)"
                             [ngClass]="{'active': page === currentPage}">{{page}}</a></li>
                 </div>
                 <li class="page-item" [ngClass]="{'disabled': disableNext === true}">
-                    <a class="page-link" (click)="onClickNext()">Next</a>
+                    <a class="page-link" style="width: 35px;" (click)="onClickNext()">Next</a>
                 </li>
             </ul>
         </nav>
