@@ -7,11 +7,11 @@
             <div class="tab">
                 <a href="">Schedules</a>
             </div>
-
+            <div style="width: 1px; height: 100%; background-color: #ababab;"></div>
             <div class="tab">
                 <a href="">Failed SubTasks</a>
             </div>
-            <div class="separator">
+            <div class="separator d-none d-md-block">
             </div>
         </div>
         <div class="flex-center">
@@ -26,17 +26,19 @@
         <div *ngFor="let task of tasksPage">
             <app-task [task]="task"></app-task>
         </div>
-        <nav *ngIf="tasks.length > 6">
+        <nav *ngIf="tasks.length > tasksPerPage">
             <ul class="pagination">
-                <li class="page-item" [ngClass]="{'disabled': disablePrev === true}">
-                    <a class="page-link" style="width: 52px;" (click)="onClickPrev()">Previous</a>
+                <li class="page-item">
+                    <a class="page-link prev" [ngClass]="{'disabled': disablePrev === true}" style="width: 52px;"
+                        (click)="onClickPrev()">Previous</a>
                 </li>
                 <div *ngFor="let page of pages">
                     <li class="page-item "><a class="page-link" (click)="onClick(page)"
                             [ngClass]="{'active': page === currentPage}">{{page}}</a></li>
                 </div>
-                <li class="page-item" [ngClass]="{'disabled': disableNext === true}">
-                    <a class="page-link" style="width: 35px;" (click)="onClickNext()">Next</a>
+                <li class="page-item">
+                    <a class="page-link next" [ngClass]="{'disabled': disableNext === true}" style="width: 35px;"
+                        (click)="onClickNext()">Next</a>
                 </li>
             </ul>
         </nav>

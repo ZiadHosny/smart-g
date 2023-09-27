@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { taskListService } from "../../services/taskList.service";
-import { Task } from "src/types";
+import { Task } from "src/utils/types";
+import { TASKS_PER_PAGE } from "src/utils/constants";
 
 @Component({
     selector: 'app-task-list',
@@ -10,6 +11,7 @@ import { Task } from "src/types";
 export class TaskListComponent implements OnInit {
 
     public tasks: Task[] = []
+    public tasksPerPage = TASKS_PER_PAGE
     public tasksPage: Task[] = []
     public numberOfPages: number = 0
     public pages: number[] = []
@@ -25,15 +27,15 @@ export class TaskListComponent implements OnInit {
         this.tasks = this.tasksService.getTasks()
         const length = this.tasks.length
 
-        this.numberOfPages = Math.ceil(length / 6)
+        this.numberOfPages = Math.ceil(length / this.tasksPerPage)
         this.pages = Array.from({ length: this.numberOfPages }, (_, i) => i + 1)
 
         if (this.numberOfPages <= 1) {
             this.disableNext = true
         }
 
-        if (length > 6) {
-            this.tasksPage = this.tasks.slice(0, 6)
+        if (length > this.tasksPerPage) {
+            this.tasksPage = this.tasks.slice(0, this.tasksPerPage)
         }
     }
 
@@ -56,7 +58,7 @@ export class TaskListComponent implements OnInit {
         } else {
             this.disableNext = false
         }
-        this.tasksPage = this.tasks.slice((value - 1) * 6, value * 6)
+        this.tasksPage = this.tasks.slice((value - 1) * this.tasksPerPage, value * this.tasksPerPage)
         this.currentPage = value
     }
 }
