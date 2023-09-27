@@ -84,6 +84,8 @@ $warm-grey: #707070;
         }
 
         .task-operation {
+            text-overflow: ellipsis;
+            overflow: hidden;
             height: 12px;
             margin: 3px 0 3px;
             font-size: 11px;
