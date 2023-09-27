@@ -155,6 +155,12 @@ $warm-grey: #707070;
     }
 }
 
+@media (min-width: 300px) {
+    .task {
+        width: 300% !important;
+    }
+}
+
 @media (min-width: 576px) {
     .task {
         width: 250% !important;
