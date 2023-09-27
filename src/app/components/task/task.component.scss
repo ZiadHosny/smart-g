@@ -154,3 +154,21 @@ $warm-grey: #707070;
         }
     }
 }
+
+@media (min-width: 576px) {
+    .task {
+        width: 250% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .task {
+        width: 180% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .task {
+        width: 130% !important;
+    }
+}
